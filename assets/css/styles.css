@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box; /* Giúp tính toán kích thước padding không làm vỡ layout */
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%; /* Mẹo hay: Quy đổi 1rem = 10px để dễ tính toán sau này */
+    /* Để biến con số mặc định 16px thành 10px, chúng ta làm phép tính ngược: 10/16 = 0.625 = 62.5% */
+}
+
+body {
+    font-family: "Poppins", sans-serif; /* Áp dụng font cho toàn web */
+    font-size: 1.4rem; /* = 14px (Dựa trên 1rem = 10px ở trên) */
+    line-height: 1.6; /* Khoảng cách dòng chuẩn cho dễ đọc */
+}
+
+:root {
+    --primary-color: #0f1b4c;
+}
+
+.header {
+    background: #e6f0ff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.main-content {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #1a1a2e;
+}
+
+.navbar .menu {
+    list-style: none;
+    display: flex;
+    margin-left: 50px;
+    gap: 0;
+}
+
+.navbar ul a {
+    font-weight: 500;
+    color: #4f5361;
+    padding: 8px 14px;
+}
+
+.navbar ul a:hover {
+    text-decoration: underline;
+}
+
+.navbar .actions {
+    margin-left: auto;
+}
+
+.navbar .btn {
+    display: inline-block;
+    min-width: 98px;
+    padding: 18px 16px;
+    background: #0f1b4c;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.navbar .btn-action {
+    padding: 13px 16px;
+    margin-left: 18px;
+    border-radius: 8px;
+}
