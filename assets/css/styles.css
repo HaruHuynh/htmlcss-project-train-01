@@ -19,6 +19,25 @@ body {
     --primary-color: #0f1b4c;
 }
 
+.main-content {
+    width: 1110px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    padding: 18px 16px;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+}
+/*========================== HEADER ========================== */
 .header {
     background: #e6f0ff;
     padding: 10px 0;
@@ -27,22 +46,10 @@ body {
     z-index: 1;
 }
 
-.main-content {
-    width: 1170px;
-    max-width: calc(100% - 48px);
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .navbar {
     width: 100%;
     display: flex;
     align-items: center;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #1a1a2e;
 }
 
 .navbar .menu {
@@ -52,12 +59,17 @@ body {
     gap: 0;
 }
 
+.navbar a {
+    text-decoration: none;
+}
+
 .navbar ul a {
     font-weight: 500;
     color: #4f5361;
     padding: 8px 14px;
 }
 
+.action-link:hover,
 .navbar ul a:hover {
     text-decoration: underline;
 }
@@ -66,24 +78,118 @@ body {
     margin-left: auto;
 }
 
-.navbar .btn {
-    display: inline-block;
-    min-width: 98px;
-    padding: 18px 16px;
-    background: #0f1b4c;
-    border-radius: 12px;
-    font-weight: 500;
+.navbar .action-link {
+    color: #0f1b4c;
     font-size: 1.4rem;
-    text-align: center;
-    color: #ffffff;
+    font-weight: 500;
+}
+
+.navbar .action-btn {
+    padding: 10px 22px;
+    margin-left: 18px;
+    border-radius: 8px;
 }
 
 .btn:hover {
     opacity: 0.9;
 }
 
-.navbar .btn-action {
-    padding: 13px 16px;
-    margin-left: 18px;
-    border-radius: 8px;
+/* ============================================= */
+
+/*================================================ HERO =========================================================== */
+.hero-section {
+    position: relative;
+    display: flex;
+    /* Đặt các phần tử con theo chiều dọc và căn giữa */
+    flex-direction: column;
+    /* Căn giữa theo chiều dọc */
+    justify-content: center;
+    background: #e6f0ff;
+    /* Làm cho khối Hero này cao bằng toàn bộ màn hình TRỪ ĐI chiều cao của thanh Header */
+    height: calc(100vh - 70px);
+}
+
+.hero-section .info {
+    width: 50%;
+}
+
+.hero-section .sub-title {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    color: #687690;
+}
+
+.hero-section .title {
+    margin-top: 8px;
+    font-weight: 700;
+    font-size: 6.2rem;
+    line-height: 1.19;
+    color: #000336;
+}
+
+.hero-section .desc {
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.78;
+    color: #5a6473;
+}
+.hero-img {
+    position: absolute;
+    right: calc(
+        (100vw - 1110px) / 2 - 100px
+    ); /* Căn phải so với lề phải của .main-content */
+    bottom: 0;
+}
+
+.hero-btn {
+    margin-top: 40px;
+    min-width: 170px;
+}
+
+/*================================================ CLIENTS =========================================================== */
+.clients-section {
+    margin-top: 80px;
+}
+
+.popularity {
+    padding: 43px 0 64px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popularity .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popularity .number-rates {
+    margin-top: 23px;
+    color: #7d8589;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.25; /* 125% */
+}
+
+.client-sponsors {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.client-sponsors a {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    height: 90px;
+}
+
+.client-sponsors a:hover {
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
 }
