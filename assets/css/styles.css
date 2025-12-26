@@ -304,18 +304,71 @@ body {
     font-weight: 600;
 }
 
-.fea-lists > div {
-    width: 100%;
-    max-width: 350px;
-    height: 227px;
-    overflow: hidden;
-    border-radius: 8px;
+.fea-lists {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.fea-lists img {
-    display: block;
-    width: 100%;
-    height: 100%;
+.fea-lists .pic {
+    width: 350px;
+    height: 227px; /* giữ tỉ lệ ảnh */
     object-fit: cover; /* hoặc 'contain' nếu muốn toàn bộ ảnh hiển thị */
-    object-position: center;
+    display: block; /* loại bỏ khoảng trắng dưới ảnh!!!!!!!!! */
+    border-radius: 12px 12px 0 0;
+}
+
+.fea-lists .sub-lists {
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 65px 80px -46px rgba(226, 238, 249, 0.6);
+    border-radius: 0 0 12px 12px; /* gắn liền phía dưới ảnh */
+    margin-top: -4px; /* kéo sát vào ảnh nếu cần thiết */
+}
+.fea-lists .list-name {
+    color: #000339;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 100%; /* 100% */
+}
+
+.fea-lists .list-address {
+    margin-top: 10px;
+    color: #a3a6ab;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.fea-lists .list-desc {
+    margin-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fea-lists .list-desc a {
+    text-decoration: none;
+    color: #4d4d52;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 100%; /* 100% */
+    letter-spacing: 0.14px;
+}
+
+.fea-lists .mini-desc01 {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* khoảng cách giữa img và a */
+}
+
+.fea-lists .mini-desc01 img {
+    display: block;
+}
+
+.fea-lists .mini-desc01 a {
+    text-decoration: none;
+    color: #4d4d52;
+    font-size: 1.4rem;
+    font-weight: 500;
 }
