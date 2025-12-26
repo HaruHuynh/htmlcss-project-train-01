@@ -193,3 +193,129 @@ body {
     background: #fff;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
 }
+
+/*================================================ GUIDES =========================================================== */
+.guides-section {
+    padding: 79px 0 120px;
+}
+
+.guides-title {
+    text-align: center;
+}
+
+.guides-title .title {
+    min-width: 269px;
+    height: 36px;
+    color: #000339;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 100%; /* 100% */
+    margin-bottom: 20px;
+}
+
+.guides-title .title::before {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 12px;
+}
+
+.guides-title .title-desc {
+    width: 460px;
+    margin: 0 auto;
+    color: #5a6473;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.875; /* 187.5% */
+}
+
+.guide-lists {
+    margin-top: 70px;
+    text-align: center; /* Center all text inside guide-lists */
+}
+
+.guide-lists .rows {
+    display: flex;
+    justify-content: space-around;
+}
+
+.guide-lists .guide-choices {
+    margin-top: 26px;
+    color: #3b3c45;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.1; /* 110% */
+}
+
+.guide-lists .guide-how {
+    margin-top: 10px;
+}
+
+.guide-lists .guide-how a {
+    text-decoration: none;
+    color: #0689ff;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.guide-lists .more-btn {
+    margin-top: 50px;
+    min-width: 170px;
+}
+
+/*================================================ FEATURED PROPERTIES =========================================================== */
+.fea-section {
+    padding: 110px 0 110px;
+    background: #f5fafe;
+    height: 727px;
+}
+
+.fea-titles .title {
+    color: #000339;
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 100%; /* 100% */
+}
+
+.fea-titles .sub-rows {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fea-titles .sub-rows .sub-title {
+    min-width: 407px;
+    color: #5a6473;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.875; /* 187.5% */
+}
+
+.fea-titles .fea-views .view-pro {
+    color: #0689ff;
+    text-align: right;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.fea-lists > div {
+    width: 100%;
+    max-width: 350px;
+    height: 227px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.fea-lists img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* hoặc 'contain' nếu muốn toàn bộ ảnh hiển thị */
+    object-position: center;
+}
