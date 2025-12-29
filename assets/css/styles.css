@@ -7,6 +7,15 @@
 html {
     font-size: 62.5%; /* Mẹo hay: Quy đổi 1rem = 10px để dễ tính toán sau này */
     /* Để biến con số mặc định 16px thành 10px, chúng ta làm phép tính ngược: 10/16 = 0.625 = 62.5% */
+    scroll-behavior: smooth; /* Kích hoạt cuộn mượt cho anchor links */
+}
+
+/* Offset anchor targets so sticky header doesn't cover content */
+#hero-section,
+#guides-section,
+#fea-section,
+#foot-section {
+    scroll-margin-top: 70px; /* Thay đổi nếu header cao hơn */
 }
 
 body {
