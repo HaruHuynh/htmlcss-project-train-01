@@ -10,6 +10,15 @@ html {
     scroll-behavior: smooth; /* Kích hoạt cuộn mượt cho anchor links */
 }
 
+/* ====================== UTILITY CLASSES ====================== */
+/* Reusable section heading class */
+.section-heading {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #000339;
+    line-height: 100%;
+}
+
 /* Offset anchor targets so sticky header doesn't cover content */
 #hero-section,
 #guides-section,
@@ -215,11 +224,8 @@ body {
 .guides-title .title {
     min-width: 269px;
     height: 36px;
-    color: #000339;
-    font-size: 3.5rem;
-    font-weight: 600;
-    line-height: 100%; /* 100% */
     margin-bottom: 20px;
+    /* Inherits from .section-heading */
 }
 
 .guides-title .title::before {
@@ -286,10 +292,7 @@ body {
 }
 
 .fea-titles .title {
-    color: #000339;
-    font-size: 3.5rem;
-    font-weight: 600;
-    line-height: 100%; /* 100% */
+    /* Inherits from .section-heading */
 }
 
 .fea-titles .sub-rows {
@@ -365,22 +368,25 @@ body {
     letter-spacing: 0.14px;
 }
 
-.fea-lists .mini-desc01 {
+/* Simplify property info selector (BEM-like approach) */
+.prop-info {
     display: flex;
     align-items: center;
     gap: 8px; /* khoảng cách giữa img và a */
 }
 
-.fea-lists .mini-desc01 img {
+.prop-info img {
     display: block;
 }
 
-.fea-lists .mini-desc01 a {
+.prop-info a {
     text-decoration: none;
     color: #4d4d52;
     font-size: 1.4rem;
     font-weight: 500;
 }
+
+/* Legacy `.mini-desc01` removed — use `.prop-info` instead */
 
 /*================================================ STATS =========================================================== */
 .stats-section {
