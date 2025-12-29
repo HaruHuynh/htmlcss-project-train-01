@@ -582,3 +582,84 @@ body {
     height: 438.437px;
     object-fit: contain;
 }
+
+/*================================================ FOOTER =========================================================== */
+.foot-section {
+    padding: 50px 0 58px;
+    background: #f2efe9;
+}
+
+.foot-content {
+    height: 360px;
+    background: #f2efe9;
+}
+
+.foot-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot-columns .foot-part .foot-title {
+    color: #1c1c1d;
+    font-family: Lato;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.foot-part .foot-list a {
+    text-decoration: none;
+    color: #7a7a7e;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+/* Remove default bullets and indent for footer lists */
+.foot-part .foot-list {
+    list-style: none;
+}
+
+.foot-part .foot-list li:first-child {
+    margin-top: 42px;
+}
+
+.foot-part .foot-list li {
+    margin-top: 18px;
+}
+
+.foot-columns .contact .contact-desc {
+    width: 257px;
+    padding: 40px 0 40px;
+    color: #7a7a7e;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.foot-columns .contact .social-media {
+    justify-content: space-between;
+    display: flex;
+    width: 117px;
+}
+
+.contact .social-media .social-link {
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    background: #fafaf7;
+    align-content: center;
+    border-radius: 8px;
+}
+
+.social-media .social-link:hover {
+    opacity: 0.7;
+}
+
+.foot-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot-bottom .bottom-text {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+}
