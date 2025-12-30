@@ -12,25 +12,20 @@ html {
 
 /* ====================== UTILITY CLASSES ====================== */
 /* Reusable section heading class */
+a {
+    text-decoration: none;
+}
+
 .section-heading {
     font-size: 3.5rem;
     font-weight: 600;
     color: #000339;
-    line-height: 100%;
-}
-
-/* Offset anchor targets so sticky header doesn't cover content */
-#hero-section,
-#guides-section,
-#fea-section,
-#foot-section {
-    scroll-margin-top: 70px; /* Thay đổi nếu header cao hơn */
+    line-height: 1;
 }
 
 body {
     font-family: "Poppins", sans-serif; /* Áp dụng font cho toàn web */
-    font-size: 1.4rem; /* = 14px (Dựa trên 1rem = 10px ở trên) */
-    line-height: 1.6; /* Khoảng cách dòng chuẩn cho dễ đọc */
+    font-size: 1.6rem; /* = 16px (Dựa trên 1rem = 10px ở trên) */
 }
 
 :root {
@@ -47,42 +42,61 @@ body {
 .btn {
     display: inline-block;
     background: var(--primary-color);
+    min-width: 98px;
     padding: 18px 16px;
     border-radius: 12px;
     font-weight: 500;
     font-size: 1.4rem;
     text-align: center;
     color: #ffffff;
-    text-decoration: none;
 }
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 2);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Offset anchor targets so sticky header doesn't cover content */
+#hero-section,
+#guides-section,
+#fea-section,
+#foot-section {
+    scroll-margin-top: 70px; /* Thay đổi nếu header cao hơn */
+}
+
 /*========================== HEADER ========================== */
 .header {
     background: #e6f0ff;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1;
+    position: relative;
+    height: 100vh;
 }
 
 .navbar {
-    width: 100%;
     display: flex;
     align-items: center;
+    padding-top: 38px; /* Avoid margin collapse */
 }
 
-.navbar .menu {
-    list-style: none;
+.navbar ul {
+    /* list-style: none; */
     display: flex;
-    margin-left: 50px;
-    gap: 0;
+    margin-left: 50px; /* 64px - 14px  */
+    /* gap: 0; */
 }
 
-.navbar a {
-    text-decoration: none;
+.navbar .actions {
+    margin-left: auto;
 }
 
 .navbar ul a {
     font-weight: 500;
+    font-size: 1.4rem;
     color: #4f5361;
     padding: 8px 14px;
 }
@@ -92,49 +106,31 @@ body {
     text-decoration: underline;
 }
 
-.navbar .actions {
-    margin-left: auto;
-}
-
 .navbar .action-link {
-    color: #0f1b4c;
+    color: var(--primary-color);
     font-size: 1.4rem;
     font-weight: 500;
 }
 
 .navbar .action-btn {
-    padding: 10px 22px;
+    padding: 13px 16px;
     margin-left: 18px;
     border-radius: 8px;
 }
 
-.btn:hover {
-    opacity: 0.9;
-}
-
-/* ============================================= */
-
 /*================================================ HERO =========================================================== */
 .hero-section {
-    position: relative;
-    display: flex;
-    /* Đặt các phần tử con theo chiều dọc và căn giữa */
-    flex-direction: column;
-    /* Căn giữa theo chiều dọc */
-    justify-content: center;
-    background: #e6f0ff;
-    /* Làm cho khối Hero này cao bằng toàn bộ màn hình TRỪ ĐI chiều cao của thanh Header */
-    height: calc(100vh - 70px);
+    margin-top: 130px;
 }
 
 .hero-section .info {
-    width: 50%;
+    width: 51%; /* (59 / 1110) x 100 */
 }
 
 .hero-section .sub-title {
     font-weight: 500;
     font-size: 1.8rem;
-    line-height: 1.5;
+    line-height: 1.5; /* 27 / 18 */
     letter-spacing: 0.01em;
     color: #687690;
 }
@@ -154,59 +150,63 @@ body {
     line-height: 1.78;
     color: #5a6473;
 }
-.hero-img {
-    position: absolute;
-    right: calc(
-        (100vw - 1110px) / 2 - 100px
-    ); /* Căn phải so với lề phải của .main-content */
-    bottom: 0;
-}
 
-.hero-btn {
+.hero-cta {
     margin-top: 40px;
     min-width: 170px;
 }
 
+.hero-img {
+    position: absolute;
+    right: calc((100vw - 1110px) / 2 - 100px);
+    bottom: 0;
+}
+
 /*================================================ CLIENTS =========================================================== */
 .clients-section {
-    margin-top: 80px;
-}
-
-.popularity {
+    margin-top: 79px;
     padding: 43px 0 64px;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
+    background: #f1efef;
 }
 
-.popularity .row {
+.clients-section .row {
     display: flex;
     justify-content: space-between;
 }
 
-.popularity .number-rates {
-    margin-top: 23px;
+/* .popularity {
+    padding: 43px 0 64px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+} */
+
+.clients-section .desc {
     color: #7d8589;
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 1.25; /* 125% */
 }
 
-.client-sponsors {
-    margin-top: 70px;
+.clients-section .row-desc {
+    margin-top: 23px;
+}
+
+.clients-section .sponsors {
+    margin-top: 96px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.client-sponsors a {
+.clients-section .sponsors a {
     display: flex;
     align-items: center;
     padding: 20px;
     height: 90px;
 }
 
-.client-sponsors a:hover {
+.clients-section .sponsors a:hover {
     border-radius: 12px;
     background: #fff;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
@@ -214,24 +214,33 @@ body {
 
 /*================================================ GUIDES =========================================================== */
 .guides-section {
-    padding: 79px 0 120px;
+    padding: 93px 0 79px;
+    margin-top: 40px;
+    background: #cbe9c0;
 }
 
-.guides-title {
+/* .guides-title {
     text-align: center;
-}
+} */
 
 .guides-title .title {
-    min-width: 269px;
-    height: 36px;
+    position: relative;
+    /* min-width: 269px; */
+    /* height: 36px; */
     margin-bottom: 20px;
+    text-align: center;
     /* Inherits from .section-heading */
 }
 
 .guides-title .title::before {
     content: "";
-    display: block;
-    width: 64px;
+    /* display: block; */
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    transform: translateX(-50%);
+    display: inline-block;
+    width: 41px;
     height: 4px;
     background: var(--primary-color);
     margin: 0 auto;
@@ -241,149 +250,156 @@ body {
 
 .guides-title .title-desc {
     width: 460px;
+    max-width: 100%;
     margin: 0 auto;
     color: #5a6473;
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.875; /* 187.5% */
+    text-align: center;
 }
 
 .guide-lists {
     margin-top: 70px;
-    text-align: center; /* Center all text inside guide-lists */
-}
-
-.guide-lists .rows {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
-.guide-lists .guide-choices {
+.guide-item {
+    margin: 0 70px;
+    text-align: center;
+}
+
+.guide-item .title {
     margin-top: 26px;
     color: #3b3c45;
-    text-align: center;
     font-size: 2rem;
     font-weight: 500;
     line-height: 1.1; /* 110% */
 }
 
-.guide-lists .guide-how {
+.guide-item .how {
+    display: inline-block;
     margin-top: 10px;
-}
-
-.guide-lists .guide-how a {
-    text-decoration: none;
-    color: #0689ff;
-    text-align: center;
-    font-size: 1.4rem;
     font-weight: 600;
+    font-size: 1.4rem;
+    color: #0689ff;
 }
 
-.guide-lists .more-btn {
+.guide-item .arrow {
+    margin-left: 6px;
+}
+
+.guide-cta {
+    display: flex;
+    justify-content: center;
     margin-top: 50px;
+}
+
+.guide-cta .btn {
     min-width: 170px;
 }
 
 /*================================================ FEATURED PROPERTIES =========================================================== */
 .fea-section {
-    padding: 110px 0 110px;
-    background: #f5fafe;
-    height: 727px;
+    margin-top: 41px;
+    padding: 110px 0;
+    background: rgb(248, 236, 249);
 }
 
-.fea-titles .title {
+.fea-section .title {
     /* Inherits from .section-heading */
 }
 
-.fea-titles .sub-rows {
+.fea-section .row {
     margin-top: 15px;
     display: flex;
     justify-content: space-between;
 }
 
-.fea-titles .sub-rows .sub-title {
-    min-width: 407px;
+.fea-section .desc {
+    /* min-width: 407px; */
     color: #5a6473;
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.875; /* 187.5% */
 }
 
-.fea-titles .fea-views .view-pro {
+.fea-section .link {
+    display: flex;
+    align-items: center;
     color: #0689ff;
-    text-align: right;
     font-size: 1.8rem;
     font-weight: 600;
 }
 
-.fea-lists {
-    margin-top: 70px;
-    display: flex;
-    justify-content: space-between;
+.fea-section .link .arrow {
+    margin-left: 8px;
 }
 
-.fea-lists .pic {
-    width: 350px;
-    height: 227px; /* giữ tỉ lệ ảnh */
+.fea-section .list {
+    margin-top: 70px;
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 30px;
+}
+
+.fea-section .item {
+    flex: 1;
+    background: #fff;
+    border-radius: 12px;
+}
+
+.fea-section .item .thumb {
+    width: 100%;
+    height: 227px;
     object-fit: cover; /* hoặc 'contain' nếu muốn toàn bộ ảnh hiển thị */
-    display: block; /* loại bỏ khoảng trắng dưới ảnh!!!!!!!!! */
     border-radius: 12px 12px 0 0;
 }
 
-.fea-lists .sub-lists {
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 65px 80px -46px rgba(226, 238, 249, 0.6);
-    border-radius: 0 0 12px 12px; /* gắn liền phía dưới ảnh */
-    margin-top: -4px; /* kéo sát vào ảnh nếu cần thiết */
+.fea-section .item .body {
+    padding: 17px 20px 24px;
 }
-.fea-lists .list-name {
+
+.fea-section .item .title a {
     color: #000339;
     font-size: 2rem;
     font-weight: 600;
-    line-height: 100%; /* 100% */
+    line-height: 1.5; /* 100% */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
-.fea-lists .list-address {
-    margin-top: 10px;
+.fea-section .item .desc {
+    margin-top: 11px;
     color: #a3a6ab;
     font-size: 1.4rem;
     font-weight: 500;
+    height: 1.5;
 }
 
-.fea-lists .list-desc {
-    margin-top: 22px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.fea-lists .list-desc a {
-    text-decoration: none;
-    color: #4d4d52;
-    text-align: center;
-    font-size: 1.4rem;
-    font-weight: 500;
-    line-height: 100%; /* 100% */
-    letter-spacing: 0.14px;
-}
-
-/* Simplify property info selector (BEM-like approach) */
-.prop-info {
+.fea-section .item .info {
+    margin-top: 21px;
     display: flex;
     align-items: center;
-    gap: 8px; /* khoảng cách giữa img và a */
 }
 
-.prop-info img {
-    display: block;
+.fea-section .item .icon {
+    margin-left: 23px;
 }
 
-.prop-info a {
-    text-decoration: none;
+.fea-section .item .icon:first-child {
+    margin-left: 0;
+}
+
+.fea-section .item .label {
+    margin-left: 8px;
     color: #4d4d52;
     font-size: 1.4rem;
     font-weight: 500;
+    letter-spacing: 0.01em;
 }
 
 /* Legacy `.mini-desc01` removed — use `.prop-info` instead */
