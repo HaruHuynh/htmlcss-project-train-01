@@ -402,35 +402,100 @@ body {
     letter-spacing: 0.01em;
 }
 
-/* Legacy `.mini-desc01` removed — use `.prop-info` instead */
-
 /*================================================ STATS =========================================================== */
 .stats-section {
-    margin-top: 80px;
-    padding: 50px 0 50px;
+    margin-top: 75px;
+    padding: 50px 0;
     background: rgb(240, 215, 219);
 }
 
-.stats-header {
+.stats-section .main-content {
+    width: 1048px;
+}
+
+.stats-section .row {
     display: flex;
 }
 
-.stats-header .header-left {
-    position: relative;
+.stats-section .img-block,
+.stats-section .info {
     width: 50%;
 }
 
-.stats-header .mini-stats {
+.stats-section .img-block {
     position: relative;
-    right: -119px;
-    width: 239px;
-    height: 252px;
-    border-radius: 0 0 12px 12px;
-    background: rgb(201, 230, 242);
-    box-shadow: 90px 85px 100px 0 rgba(0, 0, 0, 0.06);
 }
 
-.header-left .stats-photo {
+.stats-section .info {
+    padding: 79px 0 0 165px;
+}
+
+.stats-trend {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 239px;
+    padding: 45px 22px 40px;
+    border-radius: 0 0 12px 12px;
+    background: #fff;
+}
+
+.stats-trend .value {
+    color: #000339;
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+
+.stats-trend .icon {
+    margin-left: auto;
+}
+
+.stats-trend .desc {
+    margin-top: 8px;
+    color: #d24c4c;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5; /* 150% */
+}
+
+.stats-trend .seperate {
+    margin-top: 25px;
+    height: 1.2px;
+    background: var(--primary-color);
+}
+
+.stats-section .avatar-block {
+    display: flex;
+    gap: 16px 14px;
+    margin-top: 26px;
+    flex-wrap: wrap;
+}
+
+.stats-section .avatar-group {
+    display: flex;
+}
+
+.stats-section .avatar {
+    width: 16px;
+    height: 16px;
+    margin-left: -3px;
+    object-fit: cover;
+    border-radius: 50%;
+    background: var(--bg-color, #fff);
+    color: #fff;
+    text-align: center;
+    line-height: 16px;
+    font-size: 0.7rem;
+    font-weight: 450;
+    letter-spacing: -0.02em;
+}
+
+.stats-section .avatar:first-child {
+    margin-left: 0;
+}
+
+.stats-section .img-block .image {
     margin-left: auto;
     display: block;
     width: 400px;
@@ -439,115 +504,50 @@ body {
     object-fit: cover;
 }
 
-.stats-combo {
-    padding: 40px 22px;
-    position: absolute;
-    background: #fff;
-    top: 0;
-    left: 35px;
-    width: 239px;
-    height: 252px;
-    border-radius: 0 0 12px 12px;
-}
-
-.combo-header {
-    display: flex;
-    justify-content: space-between;
-}
-
-.stats-number {
-    width: 159px;
-    height: 26px;
-    color: #000339;
-    font-size: 2.6rem;
-    font-weight: 700;
-    line-height: 1; /* 100% */
-    letter-spacing: 0.26px;
-}
-
-.stats-desc {
-    margin-top: 8px;
-    width: 194px;
-    height: 31px;
-    color: #d24c4c;
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 1.5; /* 150% */
-}
-
-.stats-line {
-    height: 1.2px;
-    margin-top: 25px;
-    background: var(--primary-color);
-}
-
-.stat-groups {
-    margin-top: 25px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px 14px;
-}
-
-.stat-groups .class-member {
-    display: flex;
-}
-
-.stat-groups img {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    margin-left: -3px;
-}
-
-.header-right {
-    padding: 65px 0 0 165px;
-}
-
-.header-right .right-title {
+.stats-section .sub-title {
+    position: relative;
     width: 269px;
-    height: 142px;
     color: #000339;
     font-size: 3.5rem;
     font-weight: 600;
     line-height: 1.28571; /* 128.571% */
 }
 
-.header-right .right-title::before {
+.stats-section .sub-title::before {
+    position: absolute;
+    top: -10px;
+    left: 0;
     content: "";
     display: block;
     width: 41px;
     height: 4px;
     background: var(--primary-color);
     border-radius: 12px;
-    margin-bottom: 10px;
 }
 
-.header-right .right-subtitle {
-    margin-top: 20px;
+.stats-section .info .desc {
+    margin-top: 10px;
     width: 309px;
     color: #5a6473;
     font-size: 1.6rem;
-    font-style: normal;
     font-weight: 400;
     line-height: 1.875; /* 187.5% */
 }
 
-.stats-bottom {
+.stats-section .row-qty {
     margin-top: 110px;
-    display: flex;
     justify-content: space-between;
+    padding: 0 32px;
 }
 
-.stats-bottom .stats-prove .stats-number {
+.stats-section .qty {
     color: #000;
     font-size: 6.4rem;
-    font-style: normal;
     font-weight: 600;
-    line-height: 1; /* 100% */
 }
 
-.stats-bottom .stats-prove .stats-what {
-    margin-top: 22px;
+.stats-section .qty-desc {
+    margin-top: 24px;
     color: #7b8087;
     font-size: 1.8rem;
     font-weight: 500;
