@@ -193,7 +193,7 @@ body {
 }
 
 .clients-section .sponsors {
-    margin-top: 96px;
+    margin-top: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -202,13 +202,12 @@ body {
 .clients-section .sponsors a {
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 0 42px;
     height: 90px;
+    border-radius: 12px;
 }
 
 .clients-section .sponsors a:hover {
-    border-radius: 12px;
-    background: #fff;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
