@@ -555,141 +555,128 @@ body {
 
 /*================================================ SUBSCRIPTION =========================================================== */
 .subscription-section {
-    padding: 100px 0 55px;
+    margin-top: 90px;
     background: #f2efe9;
 }
 
-.subscription-content {
-    height: 365px;
+.subscription-section .body {
+    position: relative;
+    height: 370px;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     border-radius: 20px;
     background: #006832;
 }
 
-.subs-newsletter {
-    padding: 104px 0 0 54px;
+.subscription-section .info {
+    width: 671px;
+    max-width: 100%; /* Đảm bảo không vượt quá container */
+    padding: 0 80px;
 }
 
-.subs-newsletter .subs-title {
+.subscription-section .sub-title {
     color: #fff;
     font-size: 3.5rem;
     font-weight: 600;
-    line-height: 1; /* 100% */
+    line-height: 1.5; /* 150% */
 }
 
-.subs-newsletter .subs-desc {
+.subscription-section .desc {
     margin-top: 15px;
     color: #fff;
     font-size: 1.6rem;
-    font-style: normal;
     font-weight: 400;
     line-height: 1.875; /* 187.5% */
+    opacity: 0.75;
 }
 
-.subs-newsletter .subs-button {
+.subscription-section .btn {
     margin-top: 20px;
     min-width: 151px;
-    border-radius: 12px;
     background: #fff;
-    color: black;
+    color: #002366;
 }
 
-/* Phone image positioning helpers */
-.subs-phone {
-    position: relative; /* Tạo containing block cho phần tử tuyệt đối bên trong */
-    min-width: 50%;
-}
-
-.subs-phone .pic-phone {
+.subscription-section .image {
     position: absolute; /* Giờ có thể căn chỉnh tùy ý trong .subs-phone */
-    top: 44%;
-    left: 40%;
-    transform: translate(-50%, -50%); /* Căn giữa phần tử trong container */
-    /* Ví dụ: thay đổi các giá trị top/left hoặc dùng right/bottom để đặt tuỳ ý */
-    z-index: 2; /* Nếu cần cho pic-phone nằm trên các phần tử khác */
-    /* Có thể thêm width/height hoặc max-width để điều chỉnh kích thước */
-    width: 218.083px;
-    height: 438.437px;
-    object-fit: contain;
+    bottom: 0;
+    right: 221px;
 }
 
 /*================================================ FOOTER =========================================================== */
 .foot-section {
+    margin-top: 55px;
     padding: 50px 0 58px;
     background: #f2efe9;
 }
 
-.foot-content {
-    height: 360px;
-    background: #f2efe9;
-}
-
-.foot-columns {
+.foot-section .row {
     display: flex;
     justify-content: space-between;
 }
 
-.foot-columns .foot-part .foot-title {
+.foot-section .row-top {
+    gap: 185px;
+}
+
+.foot-section .heading {
     color: #1c1c1d;
-    font-family: Lato;
+    font-family: Lato, sans-serif;
     font-size: 2rem;
     font-weight: 700;
 }
 
-.foot-part .foot-list a {
-    text-decoration: none;
-    color: #7a7a7e;
-    font-size: 1.6rem;
-    font-weight: 400;
-}
-
-/* Remove default bullets and indent for footer lists */
-.foot-part .foot-list {
-    list-style: none;
-}
-
-.foot-part .foot-list li:first-child {
+.foot-section .list,
+.foot-section .desc {
     margin-top: 42px;
 }
 
-.foot-part .foot-list li {
-    margin-top: 18px;
+.foot-section .item {
+    margin-top: 18px; /* margin collapse */
 }
 
-.foot-columns .contact .contact-desc {
-    width: 257px;
-    padding: 40px 0 40px;
+.foot-section .item a,
+.foot-section .desc {
     color: #7a7a7e;
     font-size: 1.6rem;
     font-weight: 400;
+    white-space: nowrap; /* Ngăn chữ không xuống dòng */
 }
 
-.foot-columns .contact .social-media {
-    justify-content: space-between;
+.foot-section .desc {
+    white-space: normal;
+    line-height: 1.75;
+}
+
+.foot-section .social {
+    margin-top: 40px;
     display: flex;
+    justify-content: space-between;
     width: 117px;
 }
 
-.contact .social-media .social-link {
+.foot-section .social-link {
+    display: flex;
     width: 28px;
     height: 28px;
-    text-align: center;
     background: #fafaf7;
-    align-content: center;
+    align-items: center;
+    justify-content: center;
     border-radius: 8px;
 }
 
-.social-media .social-link:hover {
+.foot-section .social-link:hover {
     opacity: 0.7;
 }
 
-.foot-bottom {
+.foot-section .row-bottom {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    margin-top: 81px;
 }
 
-.foot-bottom .bottom-text {
+.foot-section .copyright {
     color: var(--primary-color);
     font-size: 1.4rem;
     font-weight: 400;
