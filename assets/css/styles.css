@@ -658,10 +658,14 @@ body {
     display: flex;
     width: 28px;
     height: 28px;
-    background: #fafaf7;
+    background: #f9f9f9;
     align-items: center;
     justify-content: center;
     border-radius: 8px;
+}
+
+.foot-section .social-link + .social-link {
+    margin-left: 16px;
 }
 
 .foot-section .social-link:hover {
