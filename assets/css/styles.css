@@ -4,10 +4,14 @@
     padding: 0;
 }
 
+html,
+body {
+    scroll-behavior: smooth; /* Tùy trình duyệt */
+}
+
 html {
     font-size: 62.5%; /* Mẹo hay: Quy đổi 1rem = 10px để dễ tính toán sau này */
     /* Để biến con số mặc định 16px thành 10px, chúng ta làm phép tính ngược: 10/16 = 0.625 = 62.5% */
-    scroll-behavior: smooth; /* Kích hoạt cuộn mượt cho anchor links */
 }
 
 /* ====================== UTILITY CLASSES ====================== */
